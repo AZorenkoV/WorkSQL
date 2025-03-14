@@ -1,0 +1,16 @@
+Заявка ЦС iFOBS.IIB-129536
+
+Покажите с гейта
+SELECT * FROM reestrmessages_manual_ifobs
+/
+И такой с iFOBS
+select * from paymentprocessor_queue where documentid=6011486 and documenttype=15
+/
+select * from paymentprocessor_queuelog where documentid=6011486 and documenttype=15 order by id desc
+/
+
+Покажите с Б2
+select * from ifobs_document where ifobs_cbdocumentid=6011486
+/
+И с iFOBS
+select * from cbdocumentlog where document_id=6011486 order by id desc
